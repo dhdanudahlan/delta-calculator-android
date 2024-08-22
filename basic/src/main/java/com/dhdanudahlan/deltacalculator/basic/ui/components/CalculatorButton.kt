@@ -11,7 +11,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -20,9 +19,6 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun CalculatorButton(
     label: String = "",
-    icon: ImageVector? = null,
-    contentColor: Color? = null,
-    containerColor: Color? = null,
     onClick: () -> Unit
 ) {
     Box(modifier = Modifier.padding(4.dp)) {

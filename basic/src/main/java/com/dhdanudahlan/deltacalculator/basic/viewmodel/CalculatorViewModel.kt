@@ -2,13 +2,11 @@ package com.dhdanudahlan.deltacalculator.basic.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.dhdanudahlan.deltacalculator.basic.utils.ButtonTypes
 import com.dhdanudahlan.deltacalculator.basic.utils.CalculatorState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.mozilla.javascript.Context
 import org.mozilla.javascript.Scriptable
@@ -19,13 +17,6 @@ open class CalculatorViewModel: ViewModel() {
 
     // Public StateFlow to expose the state to the UI
     val state: StateFlow<CalculatorState> = _state
-
-    fun calculate() {
-        viewModelScope.launch {
-            // Perform calculation and update state
-            _state.value = CalculatorState() // Example result
-        }
-    }
 
     fun onButtonClick(buttonTypes: ButtonTypes) = runBlocking {
         Log.i("Clicked Button", buttonTypes.label)

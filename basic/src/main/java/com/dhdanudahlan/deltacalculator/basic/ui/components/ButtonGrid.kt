@@ -17,8 +17,6 @@ fun ButtonGrid(
             val buttonType = buttonList[index]
             CalculatorButton(
                 label = buttonType.label,
-                icon = buttonType.icon,
-                containerColor = buttonType.color,
                 onClick = { onButtonClick(buttonType) }
             )
         }

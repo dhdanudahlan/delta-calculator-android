@@ -8,12 +8,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.dhdanudahlan.deltacalculator.basic.ui.screens.calculator.CalculatorScreen
 import com.dhdanudahlan.deltacalculator.basic.ui.theme.DeltaCalculatorTheme
 import com.dhdanudahlan.deltacalculator.basic.utils.ButtonTypes
 import com.dhdanudahlan.deltacalculator.basic.utils.CalculatorState
-import com.dhdanudahlan.deltacalculator.basic.viewmodel.CalculatorViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
@@ -51,8 +49,6 @@ fun CalculatorAppDarkModePreview() {
 @Composable
 fun CalculatorAppLightModePreview() {
     DeltaCalculatorTheme(darkTheme = false) {
-        // Create a mock ViewModel for preview purposes
-        val mockViewModel = viewModel<CalculatorViewModel>()
         // Create a mock CalculatorState for preview purposes
         val mockCalculatorState = MutableStateFlow(CalculatorState())
 
