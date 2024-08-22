@@ -21,4 +21,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Delta Calculator"
 include(":app")
- 
+include(":basic")
+include(":basicnav")
+include(":basicusecase")
+include(":basicdi")
